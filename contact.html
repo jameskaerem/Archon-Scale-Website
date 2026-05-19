@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Archon Scale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="assets/Archon-Scale_Logo.svg" alt="Archon Scale" class="logo-img" />
+          <span>Archon Scale</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <a href="#form" class="btn btn-primary">Book a Free Call</a>
+    </div>
+  </nav>
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+    <div class="hero-glow"></div>
+    <div class="particles"></div>
+    <div class="container">
+      <span class="tag">• Free Call · No Pressure</span>
+      <h1 class="hero-title centered">Ready to See If We're<br/>the Right Fit?</h1>
+      <p class="hero-sub centered">Fill out the form and we'll get back to you within 24 hours. No pitch. Just a real conversation about where you are and where you want to go.</p>
+      <a href="#form" class="btn btn-primary">Book a Free Call</a>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-section" id="form">
+    <div class="container contact-grid">
+      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent = '✓ Sent — We will be in touch'; this.reset();">
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name*</label>
+            <input type="text" placeholder="Jane" required />
+          </div>
+          <div class="form-field">
+            <label>Last Name*</label>
+            <input type="text" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>How can we reach you?*</label>
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-field">
+          <label>What best describes you?</label>
+          <select required>
+            <option value="">Select Category</option>
+            <option>Online Coach</option>
+            <option>Content Creator</option>
+            <option>Course Creator</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Tell us where you are right now — audience size, current offer (if any), and what's not working*</label>
+          <textarea placeholder="Type your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send — We'll Be in Touch</button>
+      </form>
+      <aside class="contact-side">
+        <div class="info-card">
+          <div class="info-head"><i class="ph-duotone ph-envelope-simple"></i><span>Email</span></div>
+          <a href="mailto:james@archonscale.com">james@archonscale.com</a>
+        </div>
+        <div class="info-card">
+          <div class="info-head"><i class="ph-duotone ph-clock"></i><span>Response Time</span></div>
+          <span style="color: var(--text); font-size: 15px; font-weight: 500;">Within 24 hours</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container two-col">
+      <div>
+        <span class="tag">• Quick Answers</span>
+        <h2>Still Have<br/><span class="muted">Questions?</span></h2>
+        <p>Most answers are below. If yours isn't — just reach out.</p>
+      </div>
+      <div class="faq-list">
+        <details><summary>Who is Archon Scale for?</summary><p>Online coaches and creators who are already getting attention — but don't have the systems, offer structure, or backend to turn it into consistent revenue. If you're doing everything yourself and it's starting to crack, this is for you.</p></details>
+        <details><summary>What does working together actually look like?</summary><p>We start with a call to understand where you are and where the gap is. From there, we build — offer structure, sales system, operations. You stay focused on your content. We handle the rest and keep you updated without overloading you.</p></details>
+        <details><summary>How quickly can I expect results?</summary><p>Depends on where you're starting. Most clients have a structured, sellable offer ready within 2–4 weeks. A full backend system takes 4–8 weeks. We move fast — but we don't cut corners to get there.</p></details>
+        <details><summary>Do you work on a revenue split or upfront fee?</summary><p>Both options exist depending on the engagement. The Revenue Partnership is performance-based — we grow when you grow. The Offer Sprint and Full Systems Setup are project-based with a flat fee. We'll tell you which makes sense after the first call.</p></details>
+        <details><summary>What if I don't have an offer yet?</summary><p>That's exactly where we start. Most clients come to us without a packaged offer — just expertise and an audience. We build the offer from scratch, position it, and make it ready to sell. No offer is actually the best starting point.</p></details>
+        <details><summary>How do I know if this is the right fit?</summary><p>Book a free call. No pitch, no pressure. We'll look at your situation honestly — and if we can't actually help you, we'll tell you. The call takes 20–30 minutes and you'll leave with clarity either way.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="cta-card">
+        <span class="tag">• Join Us Now</span>
+        <h2>Each Project we Undertake<br/><span class="muted">is a Unique Opportunity.</span></h2>
+        <p>Ready to take the next step? Join us now and start transforming your vision into reality with expert support.</p>
+        <a href="#form" class="btn btn-primary">Book a Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="logo big">
+        <img src="assets/Archon-Scale_Logo.svg" alt="Archon Scale" class="logo-img-big" />
+      </div>
+      <div><h4>Sections</h4><a href="index.html">Home</a><a href="contact.html">Contact</a><a href="index.html#faq">FAQ</a></div>
+      <div><h4>Social</h4><a href="#">Twitter (X)</a><a href="#">Instagram</a><a href="#">Youtube</a></div>
+    </div>
+    <div class="footer-bottom container">
+      <span>© 2026 Archon Scale</span>
+      <span><a href="#">Terms & Conditions</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
