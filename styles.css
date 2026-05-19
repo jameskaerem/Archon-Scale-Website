@@ -161,7 +161,9 @@ p { color: var(--muted); margin-bottom: 22px; max-width: 540px; }
   .contact-hero { padding: 140px 0 60px; min-height: auto; }
   .contact-hero .hero-title.centered { font-size: 36px; }
   .contact-form { padding: 28px; }
-  .contact-side { position: static; top: auto; }
+  .form-success { padding: 40px 24px; }
+  .contact-side { position: static; top: auto; order: -1; }
+  .form-wrapper { order: 2; }
 }
 
 /* CONTACT PAGE */
