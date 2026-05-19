@@ -89,4 +89,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
+
+  // --- Custom dropdown ---
+  document.querySelectorAll('.custom-select').forEach(sel => {
+    const trigger = sel.querySelector('.custom-select-trigger');
+    const valueEl = sel.querySelector('.custom-select-value');
+    const hidden = sel.querySelector('input[type=hidden]');
+    const options = sel.querySelectorAll('.custom-select-options li');
+
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('.custom-select.open').forEach(o => { if (o !== sel) o.classList.remove('open'); });
+      sel.classList.toggle('open');
+    });
+
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        valueEl.textContent = opt.textContent;
+        valueEl.classList.remove('placeholder');
+        if (hidden) hidden.value = opt.dataset.value;
+        sel.classList.remove('open');
+      });
+    });
+  });
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.custom-select.open').forEach(o => o.classList.remove('open'));
+  });
 });
