@@ -44,7 +44,8 @@
   <!-- CONTACT FORM -->
   <section class="contact-section" id="form">
     <div class="container contact-grid">
-      <form class="contact-form" action="https://formspree.io/f/mbdbleal" method="POST">
+      <div class="form-wrapper">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/mbdbleal" method="POST">
         <input type="hidden" name="_subject" value="New Archon Scale Lead" />
         <div class="form-row">
           <div class="form-field">
@@ -82,6 +83,13 @@
         </div>
         <button type="submit" class="btn btn-primary btn-block">Send — We'll Be in Touch</button>
       </form>
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon"><i class="ph-duotone ph-check-circle"></i></div>
+        <h3>Message Sent!</h3>
+        <p>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+        <button type="button" class="btn btn-dark" onclick="location.reload()">Send Another Message</button>
+      </div>
+      </div>
       <aside class="contact-side">
         <div class="info-card">
           <div class="info-head"><i class="ph-duotone ph-envelope-simple"></i><span>Email</span></div>
