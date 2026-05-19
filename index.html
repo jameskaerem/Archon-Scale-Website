@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Archon Scale — The Operations for Creators Ready To Scale</title>
+  <title>Contact — Archon Scale</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -14,123 +14,82 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-left">
-        <a href="#home" class="logo">
+        <a href="index.html" class="logo">
           <img src="assets/Archon-Scale_Logo.svg" alt="Archon Scale" class="logo-img" />
           <span>Archon Scale</span>
         </a>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
-      <a href="contact.html" class="btn btn-primary">Book a Free Call</a>
+      <a href="#form" class="btn btn-primary">Book a Free Call</a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
     <div class="hero-glow"></div>
     <div class="particles"></div>
     <div class="container">
-      <h1 class="hero-title">The Operations<br/>for Creators Ready To Scale.</h1>
-      <p class="hero-sub">You have the audience. You have the expertise. We build the system that turns it into consistent revenue — behind the scenes.</p>
-      <div class="hero-buttons">
-        <a href="contact.html" class="btn btn-white">Book a Free Call</a>
-        <a href="#how" class="btn btn-dark">See How It Works</a>
-      </div>
+      <span class="tag">• Free Call · No Pressure</span>
+      <h1 class="hero-title centered">Ready to See If We're<br/>the Right Fit?</h1>
+      <p class="hero-sub centered">Fill out the form and we'll get back to you within 24 hours. No pitch. Just a real conversation about where you are and where you want to go.</p>
+      <a href="#form" class="btn btn-primary">Book a Free Call</a>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <div class="container two-col">
-      <div class="img-card"><img src="assets/about.jpg" alt="About Archon Scale" /></div>
-      <div>
-        <span class="tag">• About Archon Scale</span>
-        <h2>You're Good at What You Do.<br/><span class="muted">We Handle the Backend</span></h2>
-        <p>Most creators lose revenue not because their content is weak — but because they have no system behind it. No packaged offer. No sales process. No one handling execution. We fix that.</p>
-        <ul class="check-list">
-          <li>From no offer to a structured, sellable product</li>
-          <li>Faster time-to-revenue without adding more work to your plate</li>
-        </ul>
-        <a href="#features" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW WE WORK -->
-  <section class="how" id="how">
-    <div class="container two-col">
-      <div class="img-card"><img src="assets/work.jpg" alt="How we work" /></div>
-      <div>
-        <span class="tag">• How We Work?</span>
-        <h2>We Handle Everything<br/><span class="muted">Between Your Content and Your Revenue.</span></h2>
-        <p>We make it easy to bring your ideas to life, guiding you from concept to a fully launched product.</p>
-        <div class="stage-cards">
-          <div class="stage-card">
-            <div class="stage-head"><span class="stage-icon"><i class="ph-duotone ph-clipboard-text"></i></span><span class="stage-num">Stage 1</span></div>
-            <h3>Audit</h3>
-            <p>We start by understanding your audience, your current offer (or lack of one), and where the revenue gap is. Clear picture first — then we move.</p>
-            <div class="tags"><span>Audience Analysis</span><span>Offer Audit</span></div>
+  <!-- CONTACT FORM -->
+  <section class="contact-section" id="form">
+    <div class="container contact-grid">
+      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent = '✓ Sent — We will be in touch'; this.reset();">
+        <div class="form-row">
+          <div class="form-field">
+            <label>First Name*</label>
+            <input type="text" placeholder="Jane" required />
           </div>
-          <div class="stage-card">
-            <div class="stage-head"><span class="stage-icon"><i class="ph-duotone ph-hammer"></i></span><span class="stage-num">Stage 2</span></div>
-            <h3>Build</h3>
-            <p>We package your expertise into a structured, sellable offer and build the sales system behind it. You focus on creating. We handle the rest.</p>
-            <div class="tags"><span>Offer Design</span><span>Sales System Setup</span></div>
-          </div>
-          <div class="stage-card">
-            <div class="stage-head"><span class="stage-icon"><i class="ph-duotone ph-trend-up"></i></span><span class="stage-num">Stage 3</span></div>
-            <h3>Scale</h3>
-            <p>We implement, manage, and optimize — so your business grows without you micromanaging every step.</p>
-            <div class="tags"><span>Ongoing Support</span><span>Revenue Tracking</span></div>
-            <a href="contact.html" class="btn btn-primary small">Book a free call</a>
+          <div class="form-field">
+            <label>Last Name*</label>
+            <input type="text" placeholder="Smith" required />
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-header">
-        <span class="tag">• Features</span>
-        <h2>Everything You Need<br/><span class="muted">to Turn Attention Into Revenue.</span></h2>
-        <p>We handle the parts most coaches ignore — until those parts become the reason they're stuck.</p>
-        <a href="#about" class="btn btn-primary">View About Archon</a>
-      </div>
-      <div class="feature-grid">
-        <div class="feature"><div class="icon"><i class="ph-duotone ph-package"></i></div><h3>Offer Packaging <span class="badge">PRO</span></h3><p class="sub">Increase Profits</p><p>We turn your knowledge into a structured offer that sells — without you figuring it out alone.</p></div>
-        <div class="feature"><div class="icon"><i class="ph-duotone ph-squares-four"></i></div><h3>Custom Sales Systems</h3><p class="sub">Editable Designs</p><p>Built around how you work, not a generic template that slows you down.</p></div>
-        <div class="feature"><div class="icon"><i class="ph-duotone ph-check-circle"></i></div><h3>Clean Execution</h3><p class="sub">Optimized Code</p><p>No dropped balls. Every step tracked, managed, and delivered on time.</p></div>
-        <div class="feature"><div class="icon"><i class="ph-duotone ph-target"></i></div><h3>Strategic Positioning</h3><p class="sub">Recognized Design</p><p>We make sure your offer stands out clearly in a crowded market.</p></div>
-        <div class="feature"><div class="icon"><i class="ph-duotone ph-lightning"></i></div><h3>Fast Turnaround <span class="badge">PRO</span></h3><p class="sub">Quick Turnaround</p><p>You don't wait weeks for results. We move fast without cutting corners.</p></div>
-        <div class="feature"><div class="icon"><i class="ph-duotone ph-rocket-launch"></i></div><h3>Scalable Foundation</h3><p class="sub">Responsive</p><p>Built to grow with you — not fall apart when momentum picks up.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COLAB / MARQUEE -->
-  <section class="colab">
-    <div class="container section-header">
-      <span class="tag">• Launch Our Colab</span>
-      <h2>Every Day Without a System<br/><span class="muted">Is Revenue You're Leaving Behind.</span></h2>
-      <p>One call. No pressure. Let's see if we can actually help you.</p>
-      <a href="contact.html" class="btn btn-primary">Book a Free Strategy Call</a>
-    </div>
-    <div class="marquee">
-      <div class="marquee-track">
-        <div class="marquee-item"><img src="assets/runs-without-you.png" alt="Runs Without You" /></div>
-        <div class="marquee-item"><img src="assets/you-create.png" alt="You Create. We Operate." /></div>
-        <div class="marquee-item"><img src="assets/every-move.png" alt="Every Move. Controlled." /></div>
-        <div class="marquee-item"><img src="assets/attention-revenue.png" alt="Attention to Revenue" /></div>
-        <div class="marquee-item"><img src="assets/runs-without-you.png" alt="Runs Without You" /></div>
-        <div class="marquee-item"><img src="assets/you-create.png" alt="You Create. We Operate." /></div>
-        <div class="marquee-item"><img src="assets/every-move.png" alt="Every Move. Controlled." /></div>
-        <div class="marquee-item"><img src="assets/attention-revenue.png" alt="Attention to Revenue" /></div>
-      </div>
+        <div class="form-field">
+          <label>How can we reach you?*</label>
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-field">
+          <label>What best describes you?</label>
+          <div class="custom-select">
+            <button type="button" class="custom-select-trigger">
+              <span class="custom-select-value placeholder">Select Category</span>
+              <i class="ph-duotone ph-caret-down"></i>
+            </button>
+            <ul class="custom-select-options">
+              <li data-value="Online Coach">Online Coach</li>
+              <li data-value="Content Creator">Content Creator</li>
+              <li data-value="Course Creator">Course Creator</li>
+              <li data-value="Other">Other</li>
+            </ul>
+            <input type="hidden" name="category" />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Tell us where you are right now — audience size, current offer (if any), and what's not working*</label>
+          <textarea placeholder="Type your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send — We'll Be in Touch</button>
+      </form>
+      <aside class="contact-side">
+        <div class="info-card">
+          <div class="info-head"><i class="ph-duotone ph-envelope-simple"></i><span>Email</span></div>
+          <a href="mailto:james@archonscale.com">james@archonscale.com</a>
+        </div>
+        <div class="info-card">
+          <div class="info-head"><i class="ph-duotone ph-clock"></i><span>Response Time</span></div>
+          <span style="color: var(--text); font-size: 15px; font-weight: 500;">Within 24 hours</span>
+        </div>
+      </aside>
     </div>
   </section>
 
@@ -138,9 +97,9 @@
   <section class="faq" id="faq">
     <div class="container two-col">
       <div>
-        <span class="tag">• FAQ</span>
-        <h2>Frequently<br/><span class="muted">Asked Questions</span></h2>
-        <p>Have questions? Our FAQ section has you covered with quick answers to the most common inquiries.</p>
+        <span class="tag">• Quick Answers</span>
+        <h2>Still Have<br/><span class="muted">Questions?</span></h2>
+        <p>Most answers are below. If yours isn't — just reach out.</p>
       </div>
       <div class="faq-list">
         <details><summary>Who is Archon Scale for?</summary><p>Online coaches and creators who are already getting attention — but don't have the systems, offer structure, or backend to turn it into consistent revenue. If you're doing everything yourself and it's starting to crack, this is for you.</p></details>
@@ -154,19 +113,19 @@
   </section>
 
   <!-- FINAL CTA -->
-  <section class="final-cta" id="book">
+  <section class="final-cta">
     <div class="container">
       <div class="cta-card">
         <span class="tag">• Join Us Now</span>
-        <h2>Ready to Stop<br/><span class="muted">Figuring It Out Alone?</span></h2>
-        <p>Let's build the system behind your content — and turn your expertise into something that actually scales.</p>
-        <a href="contact.html" class="btn btn-primary">Book a Call</a>
+        <h2>Each Project we Undertake<br/><span class="muted">is a Unique Opportunity.</span></h2>
+        <p>Ready to take the next step? Join us now and start transforming your vision into reality with expert support.</p>
+        <a href="#form" class="btn btn-primary">Book a Call</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="container footer-grid">
       <div class="logo big">
         <img src="assets/Archon-Scale_Logo.svg" alt="Archon Scale" class="logo-img-big" />
