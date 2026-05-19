@@ -118,4 +118,36 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', () => {
     document.querySelectorAll('.custom-select.open').forEach(o => o.classList.remove('open'));
   });
+
+  // --- AJAX form submission (Formspree, no redirect) ---
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type=submit]');
+      const original = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const data = new FormData(contactForm);
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          contactForm.classList.add('hide');
+          document.getElementById('formSuccess').classList.add('show');
+        } else {
+          btn.textContent = original;
+          btn.disabled = false;
+          alert('Something went wrong. Please try again or email us directly at james@archonscale.com.');
+        }
+      } catch (err) {
+        btn.textContent = original;
+        btn.disabled = false;
+        alert('Network error. Please try again or email us directly at james@archonscale.com.');
+      }
+    });
+  }
 });
