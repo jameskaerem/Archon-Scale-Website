@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Archon Scale</title>
+  <link rel="icon" type="image/svg+xml" href="assets/Archon-Scale_Logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -43,20 +44,21 @@
   <!-- CONTACT FORM -->
   <section class="contact-section" id="form">
     <div class="container contact-grid">
-      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('button[type=submit]').textContent = '✓ Sent — We will be in touch'; this.reset();">
+      <form class="contact-form" action="https://formspree.io/f/mbdbleal" method="POST">
+        <input type="hidden" name="_subject" value="New Archon Scale Lead" />
         <div class="form-row">
           <div class="form-field">
             <label>First Name*</label>
-            <input type="text" placeholder="Jane" required />
+            <input type="text" name="firstName" placeholder="Jane" required />
           </div>
           <div class="form-field">
             <label>Last Name*</label>
-            <input type="text" placeholder="Smith" required />
+            <input type="text" name="lastName" placeholder="Smith" required />
           </div>
         </div>
         <div class="form-field">
           <label>How can we reach you?*</label>
-          <input type="email" placeholder="Your Email" required />
+          <input type="email" name="email" placeholder="Your Email" required />
         </div>
         <div class="form-field">
           <label>What best describes you?</label>
@@ -76,7 +78,7 @@
         </div>
         <div class="form-field">
           <label>Tell us where you are right now — audience size, current offer (if any), and what's not working*</label>
-          <textarea placeholder="Type your message..." required></textarea>
+          <textarea name="message" placeholder="Type your message..." required></textarea>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Send — We'll Be in Touch</button>
       </form>
