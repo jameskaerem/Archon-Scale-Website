@@ -60,13 +60,19 @@
         </div>
         <div class="form-field">
           <label>What best describes you?</label>
-          <select required>
-            <option value="">Select Category</option>
-            <option>Online Coach</option>
-            <option>Content Creator</option>
-            <option>Course Creator</option>
-            <option>Other</option>
-          </select>
+          <div class="custom-select">
+            <button type="button" class="custom-select-trigger">
+              <span class="custom-select-value placeholder">Select Category</span>
+              <i class="ph-duotone ph-caret-down"></i>
+            </button>
+            <ul class="custom-select-options">
+              <li data-value="Online Coach">Online Coach</li>
+              <li data-value="Content Creator">Content Creator</li>
+              <li data-value="Course Creator">Course Creator</li>
+              <li data-value="Other">Other</li>
+            </ul>
+            <input type="hidden" name="category" />
+          </div>
         </div>
         <div class="form-field">
           <label>Tell us where you are right now — audience size, current offer (if any), and what's not working*</label>
